@@ -1,0 +1,36 @@
+{
+  "short_name": "Village Market",
+  "name": "Computer Village Market",
+  "icons": [
+    {
+      "src": "village-market-48x48.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "village-market-48x48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "village-market-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "village-market-128x128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "village-market-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "description": "An e-commerce web app for computer village",
+  "display": "standalone",
+  "theme_color": "#ef5a04",
+  "background_color": "#ffffff"
+}

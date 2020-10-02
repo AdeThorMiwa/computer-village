@@ -1,0 +1,31 @@
+const Colors = {
+    Primary: '#ef5a04',
+    primary: '#ef5a04',
+    Secondary: '#888',
+    secondary: '#888',
+    Accent: '#FF9800',
+    accent: '#FF9800',
+    Light: '#ddd',
+    Lighter: '#eee',
+    midTone: '#bbb',
+    white: '#fff',
+    Dark: '#000',
+    phone: '#ef5a04',
+    MiniDark: '#444',
+    bannerGradient: '#fbfbfb,#efefef,#f9f9f9',
+    success: '#13c747',
+    whatsapp: '#13c747',
+    danger: '#FF4F00',
+    info: '#1386da',
+    warning: '',
+    facebook: '#4040d4',
+    twitter: '#1286da',
+    google_plus: '#fd0304',
+    instagram: '#a56e2a',
+    youtube: '#fd0304',
+    tumblr: '#9494b3',
+    rss: '#f37e06',
+    skeletonBackground: '#DDDBDD'
+}
+
+export default Colors;
