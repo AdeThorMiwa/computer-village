@@ -40,7 +40,8 @@ const Register = () => {
         }),
         config
       );
-      window.location = `https://adethormiwa.github.io/computer-village/${res.data}`;
+      console.log(res.data);
+      window.location.href = `https://village-dashboard.netlify.app/auth/${res.data}`;
     } catch (e) {
       const toastOptions = {
         icon: "error",
