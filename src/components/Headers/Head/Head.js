@@ -62,7 +62,11 @@ const Head = ({
         <div className={`wrapper col-12 col-md-10 row  mt-1 mt-sm-4`}>
           <h2 className="site-name col-12 col-sm-3 text-center text-sm-left p-sm-2 p-md-0">
             <Link to="/">
-              <img src={SiteLogo} className="site-logo" alt={Settings.siteName} />
+              <img
+                src={SiteLogo}
+                className="site-logo"
+                alt={Settings.siteName}
+              />
             </Link>
           </h2>
           <div className="form-wrapper col-10 col-sm-7 pr-0 pr-md-2">
@@ -214,7 +218,7 @@ const Head = ({
                     <Link to="/faq">FAQ</Link>
                   </li>
                   <li>
-                    <Link to="/contact">Contact Us</Link>
+                    <a href="https://bitstack.netlify.com">Contact Us</a>
                   </li>
                 </ul>
               </i>
