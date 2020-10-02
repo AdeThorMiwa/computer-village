@@ -34,7 +34,9 @@ const Login = () => {
         JSON.stringify({ email, password }),
         config
       );
-      window.location = `https://adethormiwa.github.io/computer-village/${res.data}`;
+      window.location.replace(
+        `https://village-dashboard.netlify.app/auth/${res.data.token}`
+      );
     } catch (e) {
       const toastOptions = {
         icon: "error",

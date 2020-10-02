@@ -40,8 +40,9 @@ const Register = () => {
         }),
         config
       );
-      console.log(res.data);
-      // window.location.replace(`https://village-dashboard.netlify.app/auth/${res.data}`);
+      window.location.replace(
+        `https://village-dashboard.netlify.app/auth/${res.data.token}`
+      );
     } catch (e) {
       const toastOptions = {
         icon: "error",
