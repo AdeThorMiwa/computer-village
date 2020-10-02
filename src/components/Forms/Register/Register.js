@@ -41,7 +41,7 @@ const Register = () => {
         config
       );
       console.log(res.data);
-      window.location.href = `https://village-dashboard.netlify.app/auth/${res.data}`;
+      // window.location.replace(`https://village-dashboard.netlify.app/auth/${res.data}`);
     } catch (e) {
       const toastOptions = {
         icon: "error",
