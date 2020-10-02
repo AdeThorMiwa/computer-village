@@ -29,9 +29,11 @@ const Store = ({ _id, name, category = [], description }) => {
         {category.length <= 2 && <Clearfix />}
       </Info>
       <Description color={color}>
-        {description && description.length > 50
-          ? `${description.slice(0, 47)}...`
-          : description}
+        {description
+          ? description.length > 50
+            ? `${description.slice(0, 47)}...`
+            : description
+          : "No description Available..."}
       </Description>
     </StoreComponentContainer>
   );
