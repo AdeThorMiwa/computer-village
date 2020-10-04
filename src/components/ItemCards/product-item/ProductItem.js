@@ -40,7 +40,7 @@ const ProductItem = ({
           className="bottom-container"
           name={name}
           discount={discount}
-          price={`₦${formatMoney(price)}`}
+          price={price}
         />
       </div>
       <Actions>
@@ -62,7 +62,7 @@ const ProductItem = ({
         <LowerContainer
           name={name}
           discount={discount}
-          price={`₦${formatMoney(price)}`}
+          price={price}
         />
       </Actions>
     </ProductItemContainer>
