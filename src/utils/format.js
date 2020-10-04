@@ -1,21 +1,21 @@
 export const formatMoney = (number, decPlaces, decSep, thouSep) => {
-  (decPlaces = isNaN((decPlaces = Math.abs(decPlaces))) ? 2 : decPlaces),
-    (decSep = typeof decSep === "undefined" ? "." : decSep);
-  thouSep = typeof thouSep === "undefined" ? "," : thouSep;
+  const dp = isNaN((decPlaces = Math.abs(decPlaces))) ? 2 : decPlaces;
+  const ds = typeof decSep === "undefined" ? "." : decSep;
+  const ts = typeof thouSep === "undefined" ? "," : thouSep;
   const sign = number < 0 ? "-" : "";
   const i = String(
-    parseInt((number = Math.abs(Number(number) || 0).toFixed(decPlaces)))
+    parseInt((number = Math.abs(Number(number) || 0).toFixed(dp)))
   );
   const j = (j = i.length) > 3 ? j % 3 : 0;
 
   return (
     sign +
-    (j ? i.substr(0, j) + thouSep : "") +
-    i.substr(j).replace(/(\decSep{3})(?=\decSep)/g, "$1" + thouSep) +
-    (decPlaces
-      ? decSep +
+    (j ? i.substr(0, j) + ts : "") +
+    i.substr(j).replace(/(\ds{3})(?=\ds)/g, "$1" + ts) +
+    (dp
+      ? ds +
         Math.abs(number - i)
-          .toFixed(decPlaces)
+          .toFixed(dp)
           .slice(2)
       : "")
   );
