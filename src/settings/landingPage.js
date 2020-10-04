@@ -21,11 +21,11 @@ const Layout = {
     },
     {
       title: "Phone & Accessories",
-      defaultSource: "/api/good?category=phone&limit=100&sort=-views",
+      defaultSource: "/api/good?category=phones&limit=100&sort=-views",
       menu: [
         {
           title: "Most Popular",
-          dataSource: "/api/good?category=phone&limit=100&sort=-views",
+          dataSource: "/api/good?category=phones&limit=100&sort=-views",
         },
         {
           title: "Best Seller",
@@ -33,7 +33,7 @@ const Layout = {
         },
         {
           title: "New Arrival",
-          dataSource: "/api/good?category=phone&limit=100&sort=-createdAt",
+          dataSource: "/api/good?category=phones&limit=100&sort=-createdAt",
         },
       ],
     },
@@ -56,20 +56,38 @@ const Layout = {
       ],
     },
     {
-      title: "Other Accessories",
-      defaultSource: "/api/good?category=media&limit=100&sort=-views",
+      title: "Gaming",
+      defaultSource: "/api/good?category=gaming&limit=100&sort=-views",
       menu: [
         {
           title: "Most Popular",
-          dataSource: "/api/good?category=media&limit=100&sort=-views",
+          dataSource: "/api/good?category=gaming&limit=100&sort=-views",
         },
         {
           title: "Best Seller",
-          dataSource: "/api/good?category=media&limit=100&sort=-brand",
+          dataSource: "/api/good?category=gaming&limit=100&sort=-brand",
         },
         {
           title: "New Arrival",
-          dataSource: "/api/good?category=media&limit=100&sort=-createdAt",
+          dataSource: "/api/good?category=gaming&limit=100&sort=-createdAt",
+        },
+      ],
+    },
+    {
+      title: "Other Accessories",
+      defaultSource: "/api/good?category=others&limit=100&sort=-views",
+      menu: [
+        {
+          title: "Most Popular",
+          dataSource: "/api/good?category=others&limit=100&sort=-views",
+        },
+        {
+          title: "Best Seller",
+          dataSource: "/api/good?category=others&limit=100&sort=-brand",
+        },
+        {
+          title: "New Arrival",
+          dataSource: "/api/good?category=others&limit=100&sort=-createdAt",
         },
       ],
     },
