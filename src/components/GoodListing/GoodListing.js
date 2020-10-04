@@ -4,6 +4,7 @@ import { wordsToUpper } from '../../utils'
 import { Link } from 'react-router-dom'
 import { SeeMoreButton } from '../Helpers/Helpers'
 import { DivSkeleton, SpanSkeleton } from '../skeleton/style'
+import { formatMoney } from '../../utils/format'
 
 const GoodListing = ({ data }) => {
     const [displayedItems, setDisplayedItems] = useState(4);
@@ -22,7 +23,7 @@ const GoodListing = ({ data }) => {
                     </thead>
                     <tbody>
                         {data.map(({price, description, store, views, _id}, i) => i < displayedItems &&  <tr key={i}>
-                                    <td>₦{price}</td>
+                                    <td>₦{formatMoney(price)}</td>
                                     <td className="d-none d-sm-table-cell">{ description ? <>{ description.length > 60 ? wordsToUpper(`${description.slice(0, 60)}...`) : wordsToUpper(description)}</> : 'No Description Available for this Product!'}</td>
                                     <td>
                                         <span>{ store ? wordsToUpper(store.name) : 'Anonymous'}</span>

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Tooltip } from "../../Helpers/Helpers";
 import { wordsToUpper } from "../../../utils";
 import { SpanSkeleton, DivSkeleton } from "../../skeleton/style";
+import { formatMoney } from "../../../utils/format";
 
 const LowerContainer = ({ className = "", name, discount, price }) => {
   return (
@@ -12,10 +13,10 @@ const LowerContainer = ({ className = "", name, discount, price }) => {
       <div id="priceContainer">
         <span className="price">
           {discount
-            ? `₦${price - Math.ceil((price * discount) / 100)}`
-            : `₦${price}`}
+            ? `₦${formatMoney(price - Math.ceil((price * discount) / 100))}`
+            : `₦${formatMoney(price)}`}
         </span>
-        <span className="price">₦{discount ? price : ""}</span>
+        <span className="price">₦{discount ? formatMoney(price) : ""}</span>
       </div>
     </div>
   );
@@ -39,7 +40,7 @@ const ProductItem = ({
           className="bottom-container"
           name={name}
           discount={discount}
-          price={price}
+          price={`₦${formatMoney(price)}`}
         />
       </div>
       <Actions>
@@ -58,7 +59,11 @@ const ProductItem = ({
             </Link>
           )}
         </div>
-        <LowerContainer name={name} discount={discount} price={price} />
+        <LowerContainer
+          name={name}
+          discount={discount}
+          price={`₦${formatMoney(price)}`}
+        />
       </Actions>
     </ProductItemContainer>
   );

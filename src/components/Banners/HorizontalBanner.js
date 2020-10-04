@@ -4,6 +4,7 @@ import { wordsToUpper } from "../../utils";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { H3Skeleton, SpanSkeleton } from "../skeleton/style";
 import { ParagraphSkeleton } from "../skeleton/Skeleton";
+import { formatMoney } from "../../utils/format";
 
 const HorizontalBanner = ({
   _id,
@@ -22,9 +23,11 @@ const HorizontalBanner = ({
         </div>
         <div className="pricing col-12 col-md-6">
           <span className="oldPrice d-none d-sm-flex">
-            {!oldPrice ? "$00.00" : oldPrice}
+            ₦{!oldPrice ? "00.00" : formatMoney(oldPrice)}
           </span>
-          <span className="newPrice d-none d-sm-flex">${price}</span>
+          <span className="newPrice d-none d-sm-flex">
+            ₦{formatMoney(price)}
+          </span>
           <Link to={`/product/${_id}`}>View Now</Link>
         </div>
       </div>

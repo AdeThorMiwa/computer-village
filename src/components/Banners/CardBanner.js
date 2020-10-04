@@ -3,6 +3,7 @@ import { CardBannerContainer } from "./style";
 import { wordsToUpper } from "../../utils";
 import { Link } from "react-router-dom";
 import { H2Skeleton, H4Skeleton, SpanSkeleton } from "../skeleton/style";
+import { formatMoney } from "../../utils/format";
 
 const CardBanner = ({ _id, images, name, price, brand, className = "" }) => {
   const starters = ["Amazing new", "Get Awesome"];
@@ -23,7 +24,7 @@ const CardBanner = ({ _id, images, name, price, brand, className = "" }) => {
           {starters[randomIndex]} {brand}
         </h2>
         <span>
-          Starting at <span>${price}</span>
+          Starting at <span>₦{formatMoney(price)}</span>
         </span>
         <Link to={`/product/${_id}`}>View</Link>
       </div>
