@@ -6,7 +6,9 @@ export const formatMoney = (number, decPlaces, decSep, thouSep) => {
   const i = String(
     parseInt((number = Math.abs(Number(number) || 0).toFixed(dp)))
   );
-  const j = (j = i.length) > 3 ? j % 3 : 0;
+
+  let j = i.length;
+  j = j > 3 ? j % 3 : 0;
 
   return (
     sign +
